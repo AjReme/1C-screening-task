@@ -21,4 +21,17 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Main Page",url:"index.html"}]}
+{text:"Main Page",url:"index.html"},
+{text:"Namespaces",url:"namespaces.html",children:[
+{text:"Namespace List",url:"namespaces.html"}]},
+{text:"Data Structures",url:"annotated.html",children:[
+{text:"Data Structures",url:"annotated.html"},
+{text:"Data Structure Index",url:"classes.html"},
+{text:"Data Fields",url:"functions.html",children:[
+{text:"All",url:"functions.html"},
+{text:"Functions",url:"functions_func.html"}]}]},
+{text:"Files",url:"files.html",children:[
+{text:"File List",url:"files.html"},
+{text:"Globals",url:"globals.html",children:[
+{text:"All",url:"globals.html"},
+{text:"Functions",url:"globals_func.html"}]}]}]}
