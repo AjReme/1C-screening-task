@@ -66,7 +66,7 @@ class trie {
       return _ptr != other._ptr;
     }
 
-    iterator operator[](const size_t& next) const {
+    iterator operator[](size_t next) const {
       return iterator(_ptr == nullptr ? _ptr : _ptr->child[next - min_key]);
     }
 
