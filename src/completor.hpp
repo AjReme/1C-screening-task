@@ -4,35 +4,28 @@
 
 #include "trie.hpp"
 
-namespace solver
-{
+namespace solver {
 
-  class completor {
+class completor {
+ private:
+  static const size_t _min_key = 'a';
+  static const size_t _max_key = 'z';
 
-   private:
+  using internal_trie = data_structure::trie<_min_key, _max_key, size_t>;
 
-    static const size_t _min_key = 'a';
-    static const size_t _max_key = 'z';
+  internal_trie _storage;
 
-    using internal_trie = data_structure::trie<_min_key, _max_key, int>;
+  internal_trie::iterator find_next_lex_min_(
+      const internal_trie::iterator& iter, std::string& word);
 
-    internal_trie _storage;
+ public:
+  completor();
 
-    internal_trie::iterator find_next_lex_min_(
-      const internal_trie::iterator& iter,
-      std::string& word
-    );
+  completor(const std::vector<std::string>& init_vec);
 
-   public:
+  void insert(const std::string& word);
 
-    completor();
+  std::string complete(const std::string& word);
+};
 
-    completor(const std::vector<std::string>& init_vec);
-
-    void insert(const std::string& word);
-
-    std::string complete(const std::string& word);
-
-  };
-
-}
+}  // namespace solver

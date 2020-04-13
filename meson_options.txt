@@ -1,0 +1,7 @@
+option(
+  'enable-tests',
+  type: 'boolean',
+  value: true,
+  description: 'Enables tests.'
+)
+
